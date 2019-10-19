@@ -1,6 +1,7 @@
 import { PostsService } from "./../posts.service";
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-post-create",
@@ -11,7 +12,10 @@ export class PostCreateComponent implements OnInit {
   enteredTitle = "";
   enteredContent = "";
 
-  constructor(private postsService: PostsService) {}
+  constructor(
+    private postsService: PostsService,
+    public route: ActivatedRoute
+  ) {}
 
   ngOnInit() {}
 
